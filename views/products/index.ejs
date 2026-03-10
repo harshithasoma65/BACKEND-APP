@@ -7,6 +7,7 @@
 </head>
 <body>
     <h2>Products Admin Page</h2>
+    <a href="/products/add">Add Products</a>
     <ol>
     <% products.forEach(product => { %>
         <li><%= product.name %>-<%=product.desc %>-<%= product.price %>-<%= product.imageUrl %></li>
