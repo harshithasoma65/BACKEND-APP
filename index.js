@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import dbConnect from "./config/db.js";
 
-// import {productRouter} from "./routes/productRoute.js";
+import {productRouter} from "./routes/productRoute.js";
 import { storeRouter } from "./routes/storeRoute.js";
 const app = express();
 app.use(expressLayouts);
@@ -27,7 +27,7 @@ app.use(
 
 app.use("/", storeRouter);
 // app.use("/auth", authRouter);
-// app.use("/products", productRouter);
+app.use("/products", productRouter);
 // app.use("/users", userRouter);
 const startServer = async () => {
   await dbConnect();
