@@ -1,3 +1,18 @@
+.header{
+   display:flex;
+   justify-content: space-between;
+   background-color: teal;
+}
+.header li{
+    display: inline-block;
+    padding:5px;
+
+}
+.footer{
+    background-color: silver;
+    padding: 5px;
+   
+}
 .row {
     display: flex;
     /* justify-content: space-around; */
