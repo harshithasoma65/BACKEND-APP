@@ -2,11 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
-    <h2>Home Page</h2>
-</body>
-</html> 
 
+<h2>Home Page</h2>
+
+<div class="products">
+
+    <% if(products.length > 0){ %>
+
+        <% products.forEach(function(product){ %>
+
+            <div style="border:1px solid #ccc; padding:10px; margin:10px; width:200px;">
+                
+                <!-- <img src="/uploads/<%= product.imageUrl %>" width="150"> -->
+                <!-- <img src="/<%= product.imageUrl %>" width="150"> -->
+                 <!-- <img src="/uploads/<%= product.imageUrl %>" width="150"> -->
+                 <img src="<%= product.imageUrl %>" width="150">
+
+                <h3><%= product.name %></h3>
+
+                <p>Price: ₹<%= product.price %></p>
+
+                <a href="/products/<%= product._id %>/edit">Edit</a>
+                <a href="/products/<%= product._id %>/delete">Delete</a>
+
+            </div>
+
+        <% }) %>
+
+    <% } else { %>
+
+        <p>No Products Found</p>
+
+    <% } %>
+
+</div>
+
+</body>
+</html>

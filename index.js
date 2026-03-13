@@ -40,7 +40,7 @@ app.use("/store", storeRouter);
 app.use("/", authenticateAdmin, homeRouter);
 app.use("/products", authenticateAdmin, productRouter);
 app.use("/users", authenticateAdmin, userRouter);
-
+app.use("/images", express.static("images"));
 const startServer = async () => {
   await dbConnect();
   app.listen(5000, () => {
