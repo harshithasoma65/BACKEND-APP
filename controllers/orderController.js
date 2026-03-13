@@ -12,7 +12,7 @@ const showOrders = async (req, res) => {
     res.status(200).json(response);
   } catch (err) {
     res.status(401).json({ error: "Something went wrong" });
-}
+  }
 };
 
 export { placeOrder, showOrders };
